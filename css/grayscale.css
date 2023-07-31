@@ -147,8 +147,8 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-    height: auto;
-    padding: 100px 0;
+    /* height: auto; */
+    height: 500px;
     color: #fff;
     background: url(../images/profile_pic_3.jpg) no-repeat bottom center scroll;
     background-color: #000;
@@ -160,24 +160,52 @@ a:focus {
 }
 
 .intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-    float: left;
     margin-top: 15%;
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 80px;
     /* color: #2FDFB8; */
     color: #da4330;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 30px;
     line-height: 2.0;
 }
 
-@media(min-width:768px) {
+.page-scroll-intro {
+    visibility: hidden;
+}
+
+
+@media(max-width: 1024px) {
+    .intro {
+        background-position: 75% 15%;
+    }
+}
+
+@media(max-width:767px) {
+    .intro {
+        background-position: 75% 15%;
+    }
+}
+
+@media(max-width: 500px) {
+    .intro .intro-body {
+        margin-top: 25%;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 40px;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 768px) {
     .intro {
         height: 100%;
         padding: 0;
@@ -189,6 +217,10 @@ a:focus {
 
     .intro .intro-body .intro-text {
         font-size: 30px;
+    }
+
+    .page-scroll-intro {
+        visibility: visible;
     }
 }
 
@@ -283,15 +315,12 @@ a:focus {
     -o-background-size: cover;
 }
 
-@media(min-width:767px) {
-    .content-section {
-        /* padding-top: 250px; */
-    }
-
-    .portfolio-section {
-        /* padding: 100px 0; */
+@media(max-width: 767px) {
+    .bordered-paragraph {
+        margin-top: 15px;
     }
 }
+
 
 .btn {
     border-radius: 0;
